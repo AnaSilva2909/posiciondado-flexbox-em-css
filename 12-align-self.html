@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - align self</title>
+    <style>
+        .flex-container{
+            max-width: 350px;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .align-container{
+            align-items: center;
+
+        }
+
+        .items{
+            background-color: brown;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .center{
+            align-self: center;
+        }
+
+        .start{
+            align-self: flex-start;
+        }
+
+        .end{
+            align-self: flex-end;
+        }
+        .baseline{
+          align-self: baseline;  
+        }
+
+        .stretch{
+            align-self:stretch;
+        }
+
+        .auto{
+            align-self: auto;
+        }
+
+        .direction{
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <h1>row</h1>
+    <section class="flex-container align-container">
+        <div class="items auto">AAAAA</div>
+        <div class="items auto">FJABJBA AFBJFDBAJ JKADHFKA</div>
+        <div class="items auto">JDV</div>
+        <div class="items auto">C</div>
+    </section>
+
+    <section class="flex-container">
+        <div class="items center">AAAAA</div>
+        <div class="items start">FJABJBA AFBJFDBAJ JKADHFKA</div>
+        <div class="items stretch">JDV</div>
+        <div class="items end">C</div>
+    </section>
+
+    <section class="flex-container">
+        <div class="items center">AAAAA</div>
+        <div class="items center">FJABJBA AFBJFDBAJ JKADHFKA</div>
+        <div class="items start">JD,oo,o,o,o,o,oV</div>
+        <div class="items end">C</div>
+    </section>
+
+    <h1>column</h1>
+    <section class="flex-container align-container direction">
+        <div class="items auto">AAAAA</div>
+        <div class="items auto">FJABJBA AFBJFDBAJ JKADHFKA</div>
+        <div class="items auto">JDV</div>
+        <div class="items auto">C</div>
+    </section>
+
+    <section class="flex-container direction">
+        <div class="items center">AAAAA</div>
+        <div class="items start">FJABJBA AFBJFDBAJ JKADHFKA</div>
+        <div class="items stretch">JDV</div>
+        <div class="items end">C</div>
+    </section>
+
+    <section class="flex-container direction">
+        <div class="items center">AAAAA</div>
+        <div class="items center">FJABJBA AFBJFDBAJ JKADHFKA</div>
+        <div class="items start">JD,oo,o,o,o,o,oV</div>
+        <div class="items end">C</div>
+    </section>
+</body>
+</html>
